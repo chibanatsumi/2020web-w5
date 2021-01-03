@@ -7,7 +7,7 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-let storyText = '気温 華氏４０度で外は寒かった。 :insertx: は出かけた。  :inserty: に着いた。  :insertz:. 体重110ポンドのBobは驚いたが、 :insertx: は驚かなかった。 :inserty: ではよくあることだった。';
+let storyText = '気温 華氏４０度で外は寒かった。 :insertx: は出かけた。 :inserty: に着いた。  :insertz:. 体重110ポンドのBobは驚いたが、 :insertx: は驚かなかった。 :inserty: ではよくあることだった。';
 let insertX = ['智','翔','雅紀','和也','潤'];
 let insertY = ['東京ドーム','ディズニーランド','家'];
 let insertZ = ['コンサートをしていた','デートしていた','踊っていた'];
@@ -24,6 +24,7 @@ function result() {
   newStory = newStory.replace(':insertx:',xItem);
   newStory = newStory.replace(':insertx:',xItem);
   newStory = newStory.replace(':inserty:',yItem);
+  newStory = newStory.replace(':inserty:',yItem);
   newStory = newStory.replace(':insertz:',zItem);
 
   if(customName.value !== '') {
@@ -32,7 +33,7 @@ function result() {
   }
 
   if(document.getElementById("日本").checked) {
-    const weight = Math.round(300*0.0714286) + ' stone';
+    const weight = Math.round(300*0.0714286) + ' kg';
     const temperature =  Math.round((94-32) * 5 / 9) + ' centigrade';
     newStory = newStory.replace('94 fahrenheit',temperature);
     newStory = newStory.replace('300 pounds',weight);
