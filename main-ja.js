@@ -34,8 +34,8 @@ function result() {
 
   if(document.getElementById("日本").checked) {
     const weight = Math.round(110 * 0.454) + ' kg';
-    const temperature =  Math.round((94-32) * 5 / 9) + ' centigrade';
-    newStory = newStory.replace('94 fahrenheit',temperature);
+    const temperature =  Math.round((40-32) * 5 / 9) + ' centigrade';
+    newStory = newStory.replace('40 fahrenheit',temperature);
     newStory = newStory.replace('110 pounds',weight);
   }
 
